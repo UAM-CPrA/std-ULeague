@@ -6,57 +6,6 @@
     <title>std::ULeague - Competitive Programming League</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <style>
-        * {
-            cursor: none !important;
-        }
-        .carousel-item {
-            height: 100vh;
-            min-height: 300px;
-            background: no-repeat center center scroll;
-            background-size: cover;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(90deg, #FF7B2490, #d3952290);
-            color: #000000; /* Changed to black */
-        }   
-
-        header {
-            background-color: #AAAAAA;
-            color: #000000; /* Changed to black */
-            text-align: center;
-        }
-
-        header .logo {
-            max-height: 50px;
-        }
-
-        section {
-            margin-bottom: 2em;
-            background: #50505088;
-            padding: 1em;
-            border-radius: 8px;
-            color: #000000; /* Changed to black */
-        }
-
-        a {
-            color: #FF7711;
-        }
-
-        a:hover {
-            color: #FFCC00;
-        }
-        section:hover {
-            transform: scale(1.01);
-            transition: transform 0.2s ease-in-out;
-        }
-
-        section {
-            transition: transform 0.2s ease-in-out;
-        }
-    </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background: linear-gradient(90deg, #FF7B24, #d39522); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
@@ -136,7 +85,7 @@
     <main class="container mt-4">
         <div class="row">
             <div class="col-md-6">
-                <section id="about" class="mb-5 p-4 bg-light rounded shad</section>ow">
+                <section id="about" class="mb-5 p-4 bg-light rounded shadow">
                     <h2 class="text-center font-weight-bold">Nuestra Historia</h2>
                     <p class="text-justify"><em>std::ULeague</em> es una liga universitaria creada a finales de 2024 por las asociaciones de programación competitiva de la Universidad Autónoma de Madrid (<em>CPrA</em>) y la Universidad Complutense de Madrid (<em>UCppM</em>)</p>
                     <div class="d-flex justify-content-around mt-3">
@@ -144,7 +93,7 @@
                         <img src="ucppm.png" alt="UCppM Logo" class="img-fluid shadow" style="max-width: 150px;">
                     </div>
                     <div class="text-center mt-4">
-                        <a href="general-rankings.html" class="btn font-weight-bold"> Conoce toda la historia <img src="flecha.png" alt="Arrow Icon" style="max-width: 20px;"></a>
+                        <a href="history.html" class="btn font-weight-bold"> Conoce toda la historia <img src="flecha.png" alt="Arrow Icon" style="max-width: 20px;"></a>
                     </div>
                 </section>
             </div>
@@ -163,98 +112,68 @@
             </div>
         </div>
         <section id="clasificaciones" class="mb-5 p-4 bg-light rounded shadow">
-            <h2 class="text-center font-weight-bold">Clasificaciones</h2>
-            <div class="row">
+            
+            <h2 class="text-center font-weight-bold">Clasificaciones de liga</h2>
+    <div class="row">
         <div class="col-md-6">
             <h3 class="text-center">Por Asociación</h3>
-            <table class="table table-dark table-striped">
-                <thead>
-                    <tr>
-                        <th scope="col">Posición</th>
-                        <th scope="col">Asociación</th>
-                        <th scope="col">Puntos</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Asociación A</td>
-                        <td>300</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Asociación B</td>
-                        <td>250</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Asociación C</td>
-                        <td>200</td>
-                    </tr>
-                </tbody>
-            </table>
-            <a href="full-association-rankings.html" class="btn font-weight-bold">Ver clasificación completa <img src="flecha.png" alt="Arrow Icon" style="max-width: 20px;"></a>
+            <div class="table-wrapper">
+                <table id="association-table" class="table table-dark table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Posición</th>
+                            <th scope="col">Asociación</th>
+                            <th scope="col">Puntos</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Data will be inserted here by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
         </div>
         <div class="col-md-6">
             <h3 class="text-center">Por Equipo</h3>
-            <table class="table table-dark table-striped">
-                <thead>
-                    <tr>
-                        <th scope="col">Posición</th>
-                        <th scope="col">Asociación</th>
-                        <th scope="col">Equipo</th>
-                        <th scope="col">Puntos</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Asociación A</td>
-                        <td>Equipo A1</td>
-                        <td>100</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Asociación B</td>
-                        <td>Equipo B1</td>
-                        <td>90</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Asociación C</td>
-                        <td>Equipo C1</td>
-                        <td>80</td>
-                    </tr>
-                </tbody>
-            </table>
-            <a href="full-team-rankings.html" class="btn font-weight-bold">Ver clasificación completa <img src="flecha.png" alt="Arrow Icon" style="max-width: 20px;"></a>
+            <div class="table-wrapper">
+                <table id="team-table" class="table table-dark table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Posición</th>
+                            <th scope="col">Asociación</th>
+                            <th scope="col">Equipo</th>
+                            <th scope="col">Puntos</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Data will be inserted here by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
     <div class="text-center mt-4">
-        <a href="general-rankings.html" class="btn font-weight-bold">Ver ligas de cursos anteriores <img src="flecha.png" alt="Arrow Icon" style="max-width: 20px;"></a>
+        <a href="preivous-rankings.html" class="btn font-weight-bold">Ver ligas de cursos anteriores <img src="flecha.png" alt="Arrow Icon" style="max-width: 20px;"></a>
     </div>
 </section>
         <section id="events"  class="mb-5 p-4 bg-light rounded shadow">
             <h2 class="text-center font-weight-bold">Eventos entrantes</h2>
             <ul class="list-group">
                 <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
-                    Event 1: Date and Details
-                    <span class="badge badge-primary badge-pill">New</span>
+                    std::ULeague 24/25 : Jornada 1
+                    <span class="badge badge-primary badge-pill">Febrero</span>
+                    <span class="badge badge-warning badge-pill">Fecha variable</span>
                 </li>
-                <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
-                    Event 2: Date and Details
-                    <span class="badge badge-primary badge-pill">New</span>
-                </li>
-                <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
-                    Event 3: Date and Details
-                    <span class="badge badge-primary badge-pill">New</span>
-                </li>
+
             </ul>
         </section>
 
         <section id="contact"  class="mb-5 p-4 bg-light rounded shadow">
             <h2 class="text-center font-weight-bold">Contáctanos</h2>
-            <p class="text-center">Si quieres participar, patrocinarnos, o cualquier otra cuestión, estamos aquí :  <a href="mailto:uam.cpra@gmail.com" class="text-warning font-weight-bold">uam.cpra@gmail.com</a>.</p>
+            <p class="text-center">Si quieres participar, patrocinarnos, o cualquier otra cuestión, estamos aquí :</p>
+            <ul>
+                <li>UAM-CPrA: <a href="mailto:cpra.asociacion@uam.es">cpra.asociacion@uam.es</a></li>
+                <li>UCppM: <a href="mailto:uccpm@ucm.es">uccpm@ucm.es</a></li>
+            </ul>  
         </section>
     </main>
     <footer class="bg-dark text-white text-center py-3">

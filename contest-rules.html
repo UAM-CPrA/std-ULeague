@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>std::ULeague - Contest Rules</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        * {
+            cursor: none !important;
+        }
+    
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(90deg, #FF7B2490, #d3952290);
+            color: #000000;
+            padding-top: 100px;
+        }   
+
+        header {
+            background-color: #AAAAAA;
+            color: #000000;
+            text-align: center;
+        }
+
+        header .logo {
+            max-height: 50px;
+        }
+
+        section {
+            margin-bottom: 2em;
+            background: #50505088;
+            padding: 1em;
+            border-radius: 8px;
+            color: #000000;
+        }
+
+        a {
+            color: #FF7711;
+        }
+
+        a:hover {
+            color: #FFCC00;
+        }
+        section:hover {
+            transform: scale(1.01);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        section {
+            transition: transform 0.2s ease-in-out;
+        }
+
+        main {
+            margin-top: 80px; /* Adjust this value based on the height of your nav */
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background: linear-gradient(90deg, #FF7B24, #d39522); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+        <a class="navbar-brand" href="./index.html">
+            <img src="logoWithBackground.png" alt="std::ULeague Logo" class="logo" style="max-width: 30%;">
+        </a>
+    </nav>
+
+    <main class="container mt-4">
+        <section id="about" class="mb-5 p-4 bg-light rounded shadow">
+            <h2>Bases del concurso</h2>
+            <p>
+                std::ULeague es una liga interuniversitaria que se subsecciona en dos etapas distintas, la liga y los playoffs. Para cualquier jornada, independiente de la etapa, se aplica el siguiente sistema logarítmico de puntación.
+            </p>
+            <p>$$\textit{Puntos}(i) = \left\lfloor M \cdot \frac{\log(P+1)-\log(i)}{\log(P+1)} \right\rfloor$$</p>
+            <p>Donde:</p>
+            <ul>
+                <li>M es la cantidad de puntos máxima que se le puede otorgar a un participante.</li>
+                <li>P es la cantidad de participantes en la jornada.</li>
+
+            <li>i es la posición del participante en la jornada.</li>
+        </ul>
+        <h4>Bonificaciones de puntos</h4>
+        <p>Además de los puntos obtenidos por la posición, se pueden otorgar bonificaciones adicionales en las siguientes situaciones:</p>
+        <ul>
+            <li>Bonificación por AC en todos los problemas: PlenoAC = Puntos(1) − Puntos(2)</li>
+            <li>Primera resolución de ejercicio difícil: ResDificil = Puntos(4) − Puntos(5)</li>
+        </ul>
+        </section>
+
+
+        <div class="row">
+            <div class="col-md-6">
+                <section id="league" class="mb-5 p-4 bg-light rounded shadow">
+                    <h2>Bases de la liga</h2>
+                    <p>Cualquier asocación / universidad puede inscribirse en la liga. Antes de empezar la competición, se aplica un número en específico de equipos por asocación / universidad. </p>
+                    <p>Durante el año escolar, se harán diversas jornadas. Todos los equipos compiten a la vez y se llevarán su determinada puntuación de la competición. Tras las jornadas durante el año escolar, se aplicará un ranking de los mejores equipos.</p>
+                    <p>Paralelamente, se aplicará otra liga, que recoge la puntuación agrupada por asocación. Al final del año, las mejores asocaciones pasan a los playoffs.</p>
+                </section>
+            </div>
+            <div class="col-md-6">
+                <section id="playoffs" class="mb-5 p-4 bg-light rounded shadow">
+                    <h2>Bases de los playoffs</h2>
+                    <p>Los playoffs consisten son "a 1" por etapa del torneo.</p>
+                    <p>El formato sigue siendo semejante al de la liga, se sigue aplicando el sistema paralelo. Esta vez las asociaciones reminentes luchan solo contra el equipo que les ha tocado competir. Por tanto, el sistema de puntos por asocación, se aplica solo sobre los equipos de ambas asociaciones. </p>
+                    <p>En la puntuación por equipo se aplica la puntación en formato de liga, pudiendo participar hasta ser eliminado</p>
+                    <p>El torneo será un sistema de eliminación directa con cabezas de serie</p>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <div class="container mt-4">
+        <section id="prizes" class="mb-5 p-4 bg-light rounded shadow">
+            <h2>Premios</h2>
+            <p>Los premios se otorgarán tanto a nivel de equipo como a nivel de asociación. A continuación se detallan los premios:</p>
+            <h4>Liga: Premios por equipo en la liga</h4>
+            <ul>
+                <li>Por disctuir</li>
+            </ul>
+            <h4>Playoffs: Premios por equipo (MVP)</h4>
+            <ul>
+                <li>Por disctuir</li>
+
+            </ul>
+            <h4>Playoffs: Premios por asociación</h4>
+            <ul>
+                <li>Por disctuir</li>
+            </ul>
+        </section>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 std::ULeague. Made by Enrique Anguiano Vara (CPrA)</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
